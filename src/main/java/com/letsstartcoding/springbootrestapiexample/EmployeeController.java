@@ -29,7 +29,7 @@ public class EmployeeController {
     }
     /*get employee by id */
 
-    @GetMapping("/notes/{id}")
+    @GetMapping("/employees/{id}")
     public ResponseEntity<Employee> getEmployeeById(@PathVariable(value = "id") Long empid){
         Employee emp=EmployeeDAO.findOne(empid);
         if(emp==null)
